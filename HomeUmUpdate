@@ -12,41 +12,56 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="604.424" Width="416.453">
-    <Grid VerticalAlignment="Center" Background="#FFDCDBDB" Height="578.95" Margin="0,0,0,-5.526">
+        Title="GameStudy" Height="604.424" Width="416.453" Icon="owl-1.png" WindowStartupLocation="CenterScreen">
+    <Grid VerticalAlignment="Center" Height="578.95" Margin="0,0,0,-5.526">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF7D97DA" Offset="0.018"/>
+                <GradientStop Color="#FFD3D6F1" Offset="0.871"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="57*"/>
-            <ColumnDefinition Width="210*"/>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="32*"/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="96*"/>
             <ColumnDefinition Width="46*"/>
         </Grid.ColumnDefinitions>
 
-        <materialDesign:Card  Height="400" Padding="32" Margin="17,81.477,15,0" Grid.ColumnSpan="5">
+        <materialDesign:Card  Height="400" Padding="32" Margin="17,81.477,15,0" Grid.ColumnSpan="6">
             <StackPanel >
                 <TextBlock
-                HorizontalAlignment="Center"
-                Style="{DynamicResource MaterialDesignTitleTextBlock}" Margin="78.381,0"><Run Text="Welcome to Quiz"/></TextBlock>
+                        HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}" 
+                        Margin="78.381,0" 
+                        FontWeight="Bold" 
+                        FontFamily="Castellar">
+                            <Run Text="GameStudy" 
+                                 FontWeight="ExtraBold" 
+                                 Foreground="#DD000000"/>
+                </TextBlock>
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"
                            VerticalAlignment="Center"
                            Margin="20"
                            FontWeight="Light"
-                           Foreground="#FFB9B7B7"
+                           Foreground="#FF838080"
                            TextWrapping="Wrap"
-                           Text="It is a long established fact that a reader will "
+                           Text="Teste seus conhecimentos e habilidades para o Enem"
                            TextAlignment="Center"
-                           />
-
+                           Name="ButtonStart" 
+                           Cursor="Hand"/>
             </StackPanel>
         </materialDesign:Card>
-        <Button Style="{DynamicResource MaterialDesignRaisedAccentButton}"
-                Background="#FF8000EA"
+        <Button 
+                Style="{DynamicResource MaterialDesignRaisedAccentButton}"
+                Background="#FF3868E6"
                 BorderBrush="#FF878784"
                 Foreground="#DDFFFFFF"
                 FontWeight="Normal"
                 FontSize="20"
                 Content="Start"
-                Margin="52.301,365.167,52.134,179.167"
-                Height="Auto" Grid.ColumnSpan="3" Grid.Column="1"/>
+                Margin="52.301,365.167,52.133,179.167"
+                Height="Auto" Grid.ColumnSpan="4" Grid.Column="1"
+       />
     </Grid>
 </Window>
